@@ -1,0 +1,12 @@
+{{l |length }}
+<h1>{{t}}</h1>
+{% if l is not empty %}
+{% for item in l %}
+
+ <a href="{{ path('list', {'name': item.name}) }}">Détails</a>
+{{item.username |upper }}
+{% endfor %}
+
+{% else %}
+<h1> vide</h1>
+{% endif %}
